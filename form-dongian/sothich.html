@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Sở thích</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+       body{
+           padding: 0;
+           margin: 0;
+           box-sizing: border-box;
+           overflow: hidden;
+       }
+       #header{
+           width: 70%;
+           background: rgb(36, 230, 230);
+           margin: auto;
+           padding: 20px 30px;
+           height: 55vh;
+       }
+       .form{
+           background: #fff;
+           padding-top: 10px;
+           height: 100%;
+       }
+       #header h1{
+           text-align: center;
+           background: orangered;
+           color: #fff;
+           margin: 0px 15px 10px 15px;
+       }
+       #header .name,
+       #header .email,
+       #header .hobby{
+           margin-bottom: 10px;
+       }
+       #header .name label,
+       #header .email label,
+       #header .hobby label{
+          width: 20%;
+          text-align: right;
+          padding-right: 5px;
+          color: blue;
+       }
+       #header .hobby label{
+           float: left;
+       }
+       #header .name input{
+           width: 300px;
+       }
+       #header .hobby .sothich{
+           width: 60%;
+           float: left;
+           color: orangered;
+           padding-left: 10px;
+       }
+       #header .hobby .sothich label{
+           color: orange;
+           width: 33%;
+           text-align: left;
+       }
+       #header .hobby .sothich label input{
+           margin-right: 5px;
+       }
+       #header .submit{
+           width: 100%;
+           float: left;
+           margin-left: 190px;
+       }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <form action="" class="form">
+            <h1>Sở thích của bạn</h1>
+            <div class="name">
+                <label for="name">Họ và tên</label>
+                <input type="text" id="name" name="username" placeholder="Nhập username">
+            </div>
+            <div class="email">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Nhập email">   
+            </div>
+           <div class="hobby">
+                <label for="hobby">Sở thích</label>
+                <div class="sothich">
+                    <label for=""><input type="checkbox">Thể thao</label>
+                    <label for=""><input type="checkbox">Âm nhạc</label>
+                    <label for=""><input type="checkbox">Đọc sách</label>
+                    <label for=""><input type="checkbox">Lướt web</label>
+                    <label for=""><input type="checkbox">Chơi game</label>
+                    <label for=""><input type="checkbox">Điện ảnh</label>
+                    <label for=""><input type="checkbox">Du lịch</label>
+                </div>
+           </div>
+            <div class="submit">
+                <input type="submit" value="Gửi thông tin" name="submit">
+                <input type="reset" value="Nhập lại" name="reset">
+            </div>
+        </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

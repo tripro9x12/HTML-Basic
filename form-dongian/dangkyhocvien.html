@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #dang-ky {
+            width: 50%;
+            margin: auto;
+        }
+
+        .form {
+            background-color: rgb(238, 198, 90);
+            padding: 5px 0;
+        }
+
+        #dang-ky h1 {
+            color: rgb(45, 28, 199);
+            background-color: aqua;
+            margin: 0 10px 10px 10px;
+            padding: 5px 0;
+        }
+
+        #dang-ky label {
+            line-height: 30px;
+            left: 20px;
+            width: 15%;
+            color: blue;
+            margin-left: 10px;
+        }
+
+        #dang-ky .submit {
+            margin-left: 110px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dang-ky">
+        <form action="" class="form">
+            <h1 style="text-align: center;">Đăng ký học viên</h1>
+            <label for="username">Họ và tên</label>
+            <input type="text" id="username" name="username" placeholder="username"><br>
+
+            <label for="birth">Ngày sinh</label>
+            <input type="text" id="birth" name="birthday" placeholder="birthday"><br>
+
+            <div style="position: relative;">
+                <label for="gender">Giới tính</label>
+                <label for="male" style="color: black;"><input type="radio" id="male" name="gender" value="Nam" checked>
+                    Nam</label>
+                <label for="female" style="color: black; left:180px; position: absolute;"><input type="radio"
+                        name="gender" id="female" value="Nữ"> Nữ</label>
+            </div>
+
+            <div style="position: relative;">
+                <label for="address">Địa chỉ</label>
+                <input type="text" style="height: 80px; position: absolute;" id="address" placeholder="address">
+            </div>
+
+            <label for="class" style="margin-top: 55px;">Lớp</label>
+            <select name="" id="class">
+                <option value="">--chọn lớp--</option>
+                <option value="">lớp 10</option>
+                <option value="">lớp 11</option>
+                <option value="">lớp 12</option>
+            </select><br>
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Email"><br>
+
+            <label for="phone">Điện thoại</label>
+            <input type="text" id="phone" name="phone" placeholder="Phone number">
+            
+            <div class="submit">
+                <input type="submit" value="Đăng ký" name="submit">
+                <input type="reset" value="Nhập lại" name="reset">
+            </div>
+        </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
