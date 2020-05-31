@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Bài tập: Tạo form đăng ký người dùng</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        div{
+            width: 40%;
+            margin: auto;
+        }
+        div label input[name='gender']{
+            margin-right: 4px;
+        }
+        div label{
+            margin-right: 4px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+       <form action="http://demo.codegym.vn/6/registration_form/register.php" method="POST">
+            <!--Họ và tên-->
+            <label for="name">Họ và tên:</label><br>
+            <input type="text" name="name" id="name"><br>
+            <!--Email-->
+            <label for="email">Email:</label><br>
+            <input type="text" name="email" id="email"><br>
+            <!--PhoneNumber-->
+            <label for="phone">Số điện thoại:</label><br>
+            <input type="text" name="phone" id="phone"><br>
+            <!--Giới tính-->
+            <label for="gender">Giới tính:</label><br>
+            <label for="male"><input type="radio" name="gender" id="male" checked>Nam</label>
+            <label for="female"><input type="radio" name="gender" id="female">Nữ</label><br>
+            <!--Đăng ký-->
+            <input type="submit" value="Đăng Ký" id="submit">
+       </form>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
