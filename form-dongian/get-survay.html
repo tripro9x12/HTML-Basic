@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #nav{
+            border-bottom: 1px dotted rgb(156, 156, 156);
+            padding-left: 15px;
+        }
+        #nav h4{
+            font-weight: 450;
+            font-size: 1.4rem;
+        }
+        #nav p{
+            font-weight: 300;
+            font-size: 0.9rem;
+        }
+        #age{
+            padding-left: 15px;
+            padding-bottom: 5px;
+            margin-top: 5px;
+            line-height: 1px;
+            transition: all ease 1s;
+        }
+        #age p, #income-range p, #gender p, #product p, #user-product p,
+        #convert-do_la p, #features p, #your-level p{
+            font-size: 0.9rem;
+            font-weight: bolder;
+            padding-top: 10px;
+        }
+        #age .age, #income-range .do-la{
+            width: 50%;
+        }
+        #income-range, #gender, #product, #user-product, #convert-do_la, #features{
+            padding: 3px 0px 5px 15px;
+            line-height: 1px;
+            transition: all ease-in-out 1s;
+        }
+        #your-level{
+            padding: 3px 0px 5px 15px;
+            transition: all ease-in-out 1s;
+        }
+        #gender label input[name="gender"],#user-product label input[name="user-product"]{
+            margin-right: 7px;
+        }
+        #product label{
+            line-height: 20px !important;
+            margin-left: 5px;
+        }
+        #your-level table{
+            border-collapse: collapse ;
+            border: 1px solid #090909;
+            text-align: center;
+        }
+        #your-level table th{
+            width: 150px;
+        }
+        #your-level table .left{
+            width: 300px;
+            text-align: left !important ;
+            padding-left: 8px;
+        }
+        #submit{
+            border-radius: 5px;
+            width: 100px;
+            margin-left: 15px;
+            margin-top: 8px;
+            margin-bottom: 10px;
+            font-weight: bolder;
+            border: 1px solid #090909;
+        }
+        #submit:hover{
+            background: aquamarine;
+        }
+    </style>
+  </head>
+  <body>
+      <form id="full-screen" action="/form-dongian/get-survay.html" method="POST">
+          <div id="nav">
+              <h4>Market Research Survey</h4>
+              <p>Please take a few moments to complete this satisfaction survey.</p>
+          </div>
+          <div id="age">
+              <p>What is your age range?</p>
+              <select name="age" class="age">
+                  <option value="18-24">18-24</option>
+                  <option value="25-34">25-34</option>
+                  <option value="35-50">35-50</option>
+                  <option value="50+">50+</option>
+              </select>
+          </div>
+          <div id="income-range">
+              <p>What is your yearly income range?</p>
+              <select name="do-la" class="do-la">
+                  <option value="">$0 - $25,000</option>
+                  <option value="">$25,001 - $50,000</option>
+                  <option value="">$50,001 - $100,000</option>
+                  <option value="">$100,000+</option>
+              </select>
+          </div>
+          <div id="gender">
+              <p>Gender</p><br>
+              <label for="male"><input type="radio" name="gender" id="male" checked>Male</label><br>
+              <label for="female"><input type="radio" name="gender" id="female">Female</label>
+          </div>
+          <div id="product">
+              <p>Which of the following products have your purchased in the last 2 months. Please check all that apply.</p>
+              <input type="checkbox" id="product1" name="product1">
+              <label for="product1">Product 1</label><br>
+              <input type="checkbox" id="product2" name="product2">
+              <label for="product2">Product 2</label><br>
+              <input type="checkbox" id="product3" name="product3">
+              <label for="product3">Product 3</label>
+          </div>
+          <div id="user-product">
+              <p>How often would you use our new product?</p>
+              <label for="use1"><input type="radio" name="user-product" id="use1">Daily</label><br>
+              <label for="use2"><input type="radio" name="user-product" id="use2">Weekly</label><br>
+              <label for="use3"><input type="radio" name="user-product" id="use3">Monthly</label>
+          </div>
+          <div id="convert-do_la">
+              <p>What would you pay for the new product?</p>
+              <span>$</span>
+              <input type="text" id="dollars" name="dollars" style="width: 100px;">
+              <span>.</span>
+              <input type="text" name="cents" id="cents" style="width: 40px;"><br>
+              <label for="dollars" style="padding-left: 13px; padding-top: 10px;">Dollars</label>
+              <label for="cents" style="margin-left: 60px;">Cents</label>
+          </div>
+          <div id="features">
+              <p><label for="area">What features you pay for the new product.</label></p>
+              <textarea id="area" style="height: 150px; width: 60%; padding-top: 5px;"></textarea>
+          </div>
+          <div id="your-level">
+              <p>Please rate your level of agreement with the following statements</p>
+              <table border="3">
+                  <thead>
+                      <tr style="background: #5f9ea0;"> 
+                          <th class="left"></th>
+                          <th>Strongly Disagree</th>
+                          <th>Disagree</th>
+                          <th>Agree</th>
+                          <th>Strongly Agree</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <th class="left">Our product are priced fairly.</th>
+                          <td><label for="fairly1"><input type="radio" id="fairly1" name="fairly"><br>1</label></td>
+                          <td><label for="fairly2"><input type="radio" id="fairly2" name="fairly"><br>2</label></td>
+                          <td><label for="fairly3"><input type="radio" id="fairly3" name="fairly"><br>3</label></td>
+                          <td><label for="fairly4"><input type="radio" id="fairly4" name="fairly"><br>4</label></td>
+                      </tr>
+                      <tr style="background: cadetblue;">
+                          <th class="left">Our product are high quality.</th>
+                          <td><label for="quality1"><input type="radio" id="quality1" name="quality"><br>1</label></td>
+                          <td><label for="quality2"><input type="radio" id="quality2" name="quality"><br>2</label></td>
+                          <td><label for="quality3"><input type="radio" id="quality3" name="quality"><br>3</label></td>
+                          <td><label for="quality4"><input type="radio" id="quality4" name="quality"><br>4</label></td>
+                      </tr>
+                      <tr>
+                          <th class="left">You would recommend our product to a friend or coworker.</th>
+                          <td><label for="coworker1"><input type="radio" id="coworker1" name="coworker"><br>1</label></td>
+                          <td><label for="coworker2"><input type="radio" id="coworker2" name="coworker"><br>2</label></td>
+                          <td><label for="coworker3"><input type="radio" id="coworker3" name="coworker"><br>3</label></td>
+                          <td><label for="coworker4"><input type="radio" id="coworker4" name="coworker"><br>4</label></td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+          <input type="submit" name="submit" id="submit" value="Submit">
+      </form>
+      <script>
+          let age = document.getElementById('age');
+          let income_range = document.getElementById('income-range');
+          let gender = document.getElementById('gender');
+          let product = document.getElementById('product');
+          let user_product = document.getElementById('user-product');
+          let convert_do_la = document.getElementById('convert-do_la');
+          let features = document.getElementById('features');
+          let your_level = document.getElementById('your-level');
+          //id = age;
+          age.onclick = function(){
+              age.style.background = 'rgba(248, 215, 124, 0.7)';
+              income_range.style.background = 'none';
+              gender.style.background = 'none';
+              product.style.background = 'none';
+              user_product.style.background = 'none';
+              convert_do_la.style.background = 'none';
+              features.style.background = 'none';
+              your_level.style.background = 'none';
+          }
+          // id = income-range;
+          income_range.onclick = function(){
+              income_range.style.background = 'rgba(248, 215, 124, 0.7)';
+              age.style.background = 'none';
+              gender.style.background = 'none';
+              product.style.background = 'none';
+              user_product.style.background = 'none';
+              convert_do_la.style.background = 'none';
+              features.style.background = 'none';
+              your_level.style.background = 'none';
+          }
+          //id = gender;
+          gender.onclick = function(){
+              gender.style.background = 'rgba(248, 215, 124, 0.7)';
+              income_range.style.background = 'none';
+              age.style.background = 'none';
+              product.style.background = 'none';
+              user_product.style.background = 'none';
+              convert_do_la.style.background = 'none';
+              features.style.background = 'none';
+              your_level.style.background = 'none';
+          }
+          //id = product;
+          product.onclick = function(){
+              product.style.background = 'rgba(248, 215, 124, 0.7)';
+              age.style.background = 'none';
+              income_range.style.background = 'none';
+              gender.style.background = 'none';
+              user_product.style.background = 'none';
+              convert_do_la.style.background = 'none';
+              features.style.background = 'none';
+              your_level.style.background = 'none';
+          }
+          //id = user-product;
+          user_product.onclick = ()=>{
+              user_product.style.background = 'rgba(248, 215, 124, 0.7)';
+              product.style.background = 'none';
+              age.style.background = 'none';
+              income_range.style.background = 'none';
+              gender.style.background = 'none';
+              convert_do_la.style.background = 'none';
+              features.style.background = 'none';
+              your_level.style.background = 'none';
+          }
+          //id = convert-do_la;
+          convert_do_la.onclick = ()=>{
+              convert_do_la.style.background = 'rgba(248, 215, 124, 0.7)';
+              age.style.background = 'none';
+              income_range.style.background = 'none';
+              gender.style.background = 'none';
+              product.style.background = 'none';
+              user_product.style.background = 'none';
+              features.style.background = 'none';
+              your_level.style.background = 'none';
+          }
+          //id = features
+          features.onclick = ()=>{
+              features.style.background = 'rgba(248, 215, 124, 0.7)';
+              age.style.background = 'none';
+              income_range.style.background = 'none';
+              gender.style.background = 'none';
+              product.style.background = 'none';
+              user_product.style.background = 'none';
+              convert_do_la.style.background = 'none';
+              your_level.style.background = 'none';
+          }
+          //id = your-level
+          your_level.onclick = ()=>{
+              your_level.style.background = 'rgba(248, 215, 124, 0.7)';
+              age.style.background = 'rgba(248, 215, 124, 0.7)';
+              income_range.style.background = 'none';
+              gender.style.background = 'none';
+              product.style.background = 'none';
+              user_product.style.background = 'none';
+              convert_do_la.style.background = 'none';
+              features.style.background = 'none';
+          }
+
+      </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
